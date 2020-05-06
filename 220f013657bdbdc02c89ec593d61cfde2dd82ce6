@@ -1,0 +1,1 @@
+{"jobID":"57517aa2-758d-b1cf-a782-7dc7c5c18a7b","spec":{"type":"policy","cause":{"Message":"","User":"Duyet Le \u003clvduyet@fossil.com\u003e"},"spec":{"demo:deployment/podinfo":{"add":{"tag_all":"glob:1.4.*"},"remove":{}}}},"result":null}
