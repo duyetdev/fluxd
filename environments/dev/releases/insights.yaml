@@ -2,11 +2,11 @@
 apiVersion: "helm.fluxcd.io/v1"
 kind: "HelmRelease"
 metadata:
-  name: "insights"
-  namespace: "data"
+  name: insights
+  namespace: data
   annotations:
     fluxcd.io/automated: "true" 
-    filter.fluxcd.io/chart-image: "glob:*"
+    filter.fluxcd.io/: "glob:*"
 spec:
   releaseName: insights
   forceUpgrade: true
@@ -33,7 +33,7 @@ spec:
         name: insights
         user: insights
       rootUser:
-        password: insightss
+        password: insights
 
     ingress:
       enabled: true
