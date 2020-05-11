@@ -8,7 +8,6 @@ spec:
   chart:
     repository: https://charts.fluxcd.io/
     name: helm-operator
-    version: 0.7.0
   values:
     createCRD: false
     allowNamespace: flux
