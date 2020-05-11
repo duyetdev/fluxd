@@ -6,7 +6,7 @@ metadata:
   namespace: "data"
   annotations:
     fluxcd.io/automated: "true" 
-    filter.fluxcd.io/insights: "glob:*"
+    filter.fluxcd.io/chart-image: "glob:*"
 spec:
   releaseName: insights
   forceUpgrade: true
