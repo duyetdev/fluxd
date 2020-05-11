@@ -1,0 +1,29 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: fluxcd
+  namespace: flux
+spec:
+  releaseName: fluxcd
+  chart:
+    repository: https://charts.fluxcd.io/
+    name: flux
+    version: 1.2.0
+  values:
+    allowedNamespaces: []
+    priorityClassName: "system-cluster-critical"
+
+    sync:
+      interval: "2m"
+
+    git:
+      url: "git@github.com:duyetdev/fluxd"
+      branch: "master"
+      path: "environments/dev"
+      label: fluxcd-dev
+      pollInterval: "2m"
+      timeout: "5m"
+      secretName: "flux-ssh"
+
+      user: "Stg FluxCD"
+      email: "support@weave.works"

@@ -1,0 +1,6 @@
+git:
+  ssh:
+    secretName: flux-ssh
+
+helm:
+  versions: v3

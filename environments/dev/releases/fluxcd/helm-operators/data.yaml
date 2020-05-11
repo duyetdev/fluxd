@@ -1,0 +1,28 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: helm-operator-data
+  namespace: flux
+spec:
+  releaseName: helm-operator-data
+  chart:
+    repository: https://charts.fluxcd.io/
+    name: helm-operator
+    version: 0.7.0
+  values:
+    createCRD: false
+    allowNamespace: data
+    chartsSyncInterval: 1m
+    statusUpdateInterval: 30s
+
+    git:
+      pollInterval: 1m
+      ssh:
+        secretName: flux-ssh
+    helm:
+      versions: v3
+
+    resources:
+      requests:
+        cpu: 100m
+        memory: 300Mi
