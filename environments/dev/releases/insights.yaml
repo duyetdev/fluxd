@@ -33,7 +33,7 @@ spec:
         name: insights
         user: insights
       rootUser:
-        password: insights
+        password: insightss
 
     ingress:
       enabled: true
