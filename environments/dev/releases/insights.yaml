@@ -1,0 +1,42 @@
+---
+apiVersion: "helm.fluxcd.io/v1"
+kind: "HelmRelease"
+metadata:
+  name: "web-insights"
+  namespace: "data"
+  annotations:
+    fluxcd.io/automated: "true" 
+    filter.fluxcd.io/webapp: "glob:*"
+spec:
+  releaseName: "web-insights"
+  forceUpgrade: true
+  resetValues: true
+  chart:
+    repository: "https://charts.bitnami.com/bitnami"
+    name: "bitnami/ghost"
+  values:
+    imageRegistry: 
+    image:
+      registry: docker.io
+      repository: bitnami/ghost
+      tag: 3.9.0-debian-10-r0
+    ghostUsername: admin
+    ghostPassword: admin
+
+    persistence:
+      enabled: true
+
+    mariadb:
+      enabled: true
+      replication:
+        enabled: true
+      db:
+        name: insights
+        user: insights
+      rootUser:
+        password: insights
+    
+    ingress:
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: nginx
