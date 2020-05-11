@@ -5,7 +5,7 @@ metadata:
   name: "insights"
   namespace: "data"
   annotations:
-    fluxcd.io/automated: "true" 
+    fluxcd.io/automated: "true"
     filter.fluxcd.io/webapp: "glob:*"
 spec:
   releaseName: "insights"
@@ -15,11 +15,11 @@ spec:
     repository: "https://charts.bitnami.com/bitnami"
     name: "bitnami/ghost"
   values:
-    imageRegistry: 
+    imageRegistry:
     image:
       registry: docker.io
       repository: bitnami/ghost
-      tag: 3.9.0-debian-10-r0
+      tag: '3'
     ghostUsername: admin
     ghostPassword: admin
 
@@ -35,7 +35,7 @@ spec:
         user: insights
       rootUser:
         password: insights
-    
+
     ingress:
       enabled: true
       annotations:
