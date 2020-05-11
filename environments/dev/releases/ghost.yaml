@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: bitnami/ghost
-      tag: 3.1.1-debian-9-r0
+      tag: 3.1.1-debian-9-r15
     persistence:
       enabled: false
     resources:
