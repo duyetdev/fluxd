@@ -2,13 +2,13 @@
 apiVersion: "helm.fluxcd.io/v1"
 kind: "HelmRelease"
 metadata:
-  name: "web-insights"
+  name: "insights"
   namespace: "data"
   annotations:
     fluxcd.io/automated: "true" 
     filter.fluxcd.io/webapp: "glob:*"
 spec:
-  releaseName: "web-insights"
+  releaseName: "insights"
   forceUpgrade: true
   resetValues: true
   chart:
