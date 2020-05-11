@@ -29,7 +29,7 @@ Install Flux and HelmOperator
 ```
 kubectl apply -f setup/flux-ssh-secret.yaml
 helm upgrade -i flux --namespace flux -f setup/flux-dev-values.yaml fluxcd/flux
-helm upgrade -i helm-operator --namespace flux fluxcd/helm-operator --set git.ssh.secretName=flux-ssh
+helm upgrade -i helm-operator --namespace flux fluxcd/helm-operator --set git.ssh.secretName=flux-ssh --set helm.versions=v3
 ```
 
 ```
