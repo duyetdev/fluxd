@@ -3,7 +3,7 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: ghost
-  namespace: demo
+  namespace: data
   annotations:
     fluxcd.io/automated: "true"
     fluxcd.io/tag.chart-image: glob:3.1.1-debian-9-*
@@ -18,7 +18,7 @@ spec:
       repository: bitnami/ghost
       tag: 3.1.1-debian-9-r15
     persistence:
-      enabled: false
+      enabled: true
     resources:
       requests:
         memory: 35Mi
@@ -28,4 +28,4 @@ spec:
     mariadb:
       master:
         persistence:
-          enabled: false
+          enabled: true
