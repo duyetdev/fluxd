@@ -8,7 +8,7 @@ metadata:
     fluxcd.io/automated: "true" 
     filter.fluxcd.io/insights: "glob:*"
 spec:
-  releaseName: "insights"
+  releaseName: insights
   forceUpgrade: true
   resetValues: true
   chart:
@@ -17,8 +17,8 @@ spec:
   values:
     image:
       registry: docker.io
-      repository: bitnami/ghost
-      tag: '3'
+      repository: duyetdev/ghost
+      tag: "3.15.3"
     ghostUsername: admin
     ghostPassword: admin
 
