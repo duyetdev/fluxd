@@ -5,8 +5,8 @@ metadata:
   name: "insights"
   namespace: "data"
   annotations:
-    fluxcd.io/automated: "true"
-    filter.fluxcd.io/webapp: "glob:*"
+    fluxcd.io/automated: "true" 
+    filter.fluxcd.io/insights: "glob:*"
 spec:
   releaseName: "insights"
   forceUpgrade: true
@@ -15,7 +15,6 @@ spec:
     repository: "https://charts.bitnami.com/bitnami"
     name: "bitnami/ghost"
   values:
-    imageRegistry:
     image:
       registry: docker.io
       repository: bitnami/ghost
