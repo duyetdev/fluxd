@@ -10,7 +10,6 @@ spec:
     name: helm-operator
   values:
     createCRD: false
-    allowNamespace: flux
     chartsSyncInterval: 1m
     statusUpdateInterval: 30s
 
