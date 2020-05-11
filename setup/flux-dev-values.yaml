@@ -5,3 +5,10 @@ git:
   secretName: flux-ssh
 registry:
   automationInterval: "1m"
+
+allowedNamespaces: ['flux']
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 100Mi

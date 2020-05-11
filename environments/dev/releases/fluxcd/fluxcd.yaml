@@ -27,3 +27,8 @@ spec:
 
       user: "Stg FluxCD"
       email: "support@weave.works"
+
+    resources:
+      requests:
+        cpu: 50m
+        memory: 100Mi
