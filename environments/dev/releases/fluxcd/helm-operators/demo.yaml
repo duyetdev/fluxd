@@ -2,13 +2,12 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: helm-operator-demo
-  namespace: flux
+  namespace: demo
 spec:
   releaseName: helm-operator-demo
   chart:
     repository: https://charts.fluxcd.io/
     name: helm-operator
-    version: 0.7.0
   values:
     createCRD: false
     allowNamespace: demo
