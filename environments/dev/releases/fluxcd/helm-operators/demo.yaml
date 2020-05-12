@@ -7,7 +7,8 @@ spec:
   releaseName: helm-operator-demo
   chart:
     repository: https://charts.fluxcd.io/
-    name: fluxcd/helm-operator
+    name: helm-operator
+    version: 1.0.1
   values:
     createCRD: false
     allowNamespace: demo
