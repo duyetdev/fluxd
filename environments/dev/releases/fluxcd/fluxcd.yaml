@@ -10,7 +10,7 @@ spec:
     name: flux
     version: 1.2.0
   values:
-    allowedNamespaces: []
+    allowedNamespaces: ["flux"]
     priorityClassName: "system-cluster-critical"
 
     sync:
