@@ -34,9 +34,6 @@ spec:
         user: insights
       rootUser:
         password: insights
-      master:
-        persistence:
-          enabled: false
 
     ingress:
       enabled: true
