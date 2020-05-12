@@ -13,8 +13,8 @@ spec:
   resetValues: true
   chart:
     repository: "https://charts.bitnami.com/bitnami"
-    name: "bitnami/ghost"
-    version: 10.0.2
+    name: "ghost"
+    version: "10.0.2"
   values:
     image:
       registry: docker.io
