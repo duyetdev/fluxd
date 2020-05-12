@@ -12,11 +12,11 @@ spec:
   values:
     createCRD: false
     allowNamespace: demo
-    chartsSyncInterval: 1m
+    chartsSyncInterval: 30s
     statusUpdateInterval: 30s
 
     git:
-      pollInterval: 1m
+      pollInterval: 30s
       ssh:
         secretName: flux-ssh
     helm:
