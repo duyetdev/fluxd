@@ -5,6 +5,8 @@ git:
 helm:
   versions: v3
 
+allowNamespace: flux
+
 resources:
   requests:
     cpu: 50m
