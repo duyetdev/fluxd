@@ -25,7 +25,7 @@ spec:
     ghostPassword: admin
 
     persistence:
-      enabled: true
+      enabled: false
 
     mariadb:
       enabled: true
