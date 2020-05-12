@@ -6,7 +6,7 @@ git:
 registry:
   automationInterval: "1m"
 
-allowedNamespaces: ['flux']
+allowedNamespaces: ["flux"]
 
 resources:
   requests:

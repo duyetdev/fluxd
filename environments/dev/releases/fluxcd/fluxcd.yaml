@@ -1,10 +1,10 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: fluxcd
+  name: flux
   namespace: flux
 spec:
-  releaseName: fluxcd
+  releaseName: flux
   chart:
     repository: https://charts.fluxcd.io/
     name: flux
@@ -20,7 +20,7 @@ spec:
       url: "git@github.com:duyetdev/fluxd"
       branch: "master"
       path: "environments/dev"
-      label: fluxcd-dev
+      label: flux-dev
       pollInterval: "2m"
       timeout: "5m"
       secretName: "flux-ssh"
