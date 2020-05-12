@@ -32,16 +32,6 @@ helm upgrade -i flux --namespace flux -f setup/flux-dev-values.yaml fluxcd/flux
 helm upgrade -i helm-operator --namespace flux -f setup/helm-operator-dev-values.yaml fluxcd/helm-operator
 ```
 
-```
-export GHUSER="YOURUSER"
-fluxctl install \
---git-user=${GHUSER} \
---git-email=${GHUSER}@users.noreply.github.com \
---git-url=git@github.com:${GHUSER}/fluxd \
---git-path=environments/dev/namespaces,environments/dev/releases,environments/dev/workloads \
---namespace=flux | kubectl apply -f -
-```
-
 ## Workloads
 
 [podinfo](https://github.com/stefanprodan/podinfo)
