@@ -32,8 +32,6 @@ spec:
 
     mariadb:
       enabled: true
-      replication:
-        enabled: true
       db:
         name: insights
         user: insights
