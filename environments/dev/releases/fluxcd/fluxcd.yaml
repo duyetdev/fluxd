@@ -14,14 +14,14 @@ spec:
     priorityClassName: "system-cluster-critical"
 
     sync:
-      interval: 30s
+      interval: 1m
 
     git:
       url: "git@github.com:duyetdev/fluxd"
       branch: "master"
       path: "environments/dev"
       label: flux-dev
-      pollInterval: 30s
+      pollInterval: 1m
       timeout: "5m"
       secretName: "flux-ssh"
 

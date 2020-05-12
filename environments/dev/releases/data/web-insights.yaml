@@ -1,0 +1,31 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: web-insights
+  namespace: data
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:*
+spec:
+  releaseName: web-insights
+  chart:
+    git: ssh://git@github.com/duyetdev/fluxd
+    ref: master
+    path: charts/ghost
+  values:
+    image:
+      repository: duyetdev/ghost
+      tag: "3.15.3"
+    persistence:
+      enabled: true
+    resources:
+      requests:
+        memory: 35Mi
+        cpu: 10m
+    service:
+      type: ClusterIP
+    mariadb:
+      master:
+        persistence:
+          enabled: true
