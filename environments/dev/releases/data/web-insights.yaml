@@ -16,7 +16,7 @@ spec:
   values:
     image:
       repository: duyetdev/ghost
-      tag: "3.15.3"
+      tag: "3.15.3-debug-2"
     persistence:
       enabled: true
     resources:
