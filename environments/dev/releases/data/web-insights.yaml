@@ -15,16 +15,25 @@ spec:
     path: charts/ghost
   values:
     image:
+      registry: docker.io
       repository: duyetdev/ghost
       tag: "3.15.3-debug-2"
     persistence:
       enabled: true
     resources:
       requests:
-        memory: 35Mi
-        cpu: 10m
+        memory: 350Mi
+        cpu: 100m
     service:
       type: ClusterIP
+
+    ghostHost: 127.0.0.1
+    ghostPort: 2369
+    ghostProtocol: http
+    ghostUsername: admin
+    ghostPassword: admin
+    ghostEmail: lvduyet@fossil.com
+    ghostBlogTitle: Fossil Insights
     mariadb:
       master:
         persistence:
