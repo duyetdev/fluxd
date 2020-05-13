@@ -31,7 +31,6 @@ spec:
     ghostPort: 2369
     ghostProtocol: http
     ghostUsername: admin
-    ghostPassword: admin
     ghostEmail: lvduyet@fossil.com
     ghostBlogTitle: Fossil Insights
     mariadb:
