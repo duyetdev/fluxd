@@ -26,10 +26,6 @@ spec:
         cpu: 100m
     service:
       type: ClusterIP
-
-    ghostHost: 127.0.0.1
-    ghostPort: 2369
-    ghostProtocol: http
     ghostUsername: admin
     ghostEmail: lvduyet@fossil.com
     ghostBlogTitle: Fossil Insights
